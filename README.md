@@ -9,8 +9,8 @@ Har bir fayl: tushuntirish + cheatsheet + amaliy misollar.
 
 ## 📚 Mavzular
 
-| # | Mavzu | 
-|---|-------|
+| # | Mavzu |
+| --- | --- |
 | 01 | 🚶 Walking An Application |
 | 02 | 🔍 Content Discovery |
 | 03 | 🌐 Subdomain Enumeration |
@@ -22,6 +22,7 @@ Har bir fayl: tushuntirish + cheatsheet + amaliy misollar.
 | 09 | ⚡ Command Injection |
 | 10 | 🗄️ SQL Injection |
 | 11 | 🏁 Race Conditions |
+| 12 | 🌐 DOM-Based Attacks |
 
 ---
 
