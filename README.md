@@ -11,18 +11,18 @@ Har bir fayl: tushuntirish + cheatsheet + amaliy misollar.
 
 | # | Mavzu |
 | --- | --- |
-| 01 | 🚶 Walking An Application |
-| 02 | 🔍 Content Discovery |
-| 03 | 🌐 Subdomain Enumeration |
-| 04 | 🔐 Authentication Bypass |
-| 05 | 🆔 IDOR |
-| 06 | 📁 File Inclusion (LFI/RFI) |
-| 07 | 🔄 SSRF |
-| 08 | 💻 XSS |
-| 09 | ⚡ Command Injection |
-| 10 | 🗄️ SQL Injection |
-| 11 | 🏁 Race Conditions |
-| 12 | 🌐 DOM-Based Attacks |
+| 01 | [🚶 Walking An Application](01_walking_an_application.md) |
+| 02 | [🔍 Content Discovery](02_content_discovery.md) |
+| 03 | [🌐 Subdomain Enumeration](03_subdomain_enumeration.md) |
+| 04 | [🔐 Authentication Bypass](04_authentication_bypass.md) |
+| 05 | [🆔 IDOR](05_idor.md) |
+| 06 | [📁 File Inclusion (LFI/RFI)](06_file_inclusion.md) |
+| 07 | [🔄 SSRF](07_ssrf.md) |
+| 08 | [💻 XSS](08_xss.md) |
+| 09 | [⚡ Command Injection](09_command_injection.md) |
+| 10 | [🗄️ SQL Injection](10_sql_injection.md) |
+| 11 | [🏁 Race Conditions](11_race_conditions.md) |
+| 12 | [🌐 DOM-Based Attacks](12_dom_based_attacks.md) |
 
 ---
 
